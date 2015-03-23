@@ -34,7 +34,7 @@
       </feature>
     </config-file>
 
-    <header-file src="src/ios/MWAYDevice.h" target-dir="HelloPlugin"/>
-    <source-file src="src/ios/MWAYDevice.m" target-dir="HelloPlugin"/>
+    <header-file src="src/ios/MWAYDevice.h" target-dir="MWAYDevice"/>
+    <source-file src="src/ios/MWAYDevice.m" target-dir="MWAYDevice"/>
   </platform>
 </plugin>

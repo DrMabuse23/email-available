@@ -11,6 +11,6 @@
                                resultWithStatus:CDVCommandStatus_OK
                                messageAsBool:msg];
 
-    [self success:result callbackId:callbackId];
+   [self.commandDelegate sendPluginResult:result callbackId:callbackId];
 }
 @end
