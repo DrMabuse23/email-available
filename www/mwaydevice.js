@@ -1,7 +1,6 @@
-/*global cordova, module*/
-
 module.exports = {
-    isEmailAvailable: function (name, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "isEmailAvailable", "isEmailAvailable", [name]);
-    }
+  isEmailAvailable: function (name, successCallback, errorCallback) {
+    console.log(name);
+    cordova.exec(successCallback, errorCallback, "MWAYDevice", "isEmailAvailable", []);
+  }
 };

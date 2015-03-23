@@ -1,16 +1,9 @@
 #import "MWAYDevice.h"
-#import MessageUI;
-
 @implementation MWAYDevice
-- (void)isEmailAvaialable:(CDVInvokedUrlCommand*)command
+- (void)isEmailAvailable:(CDVInvokedUrlCommand*)command
 {
-    NSString* callbackId = [command callbackId];
     BOOL msg = [MFMailComposeViewController canSendMail];
-
-    CDVPluginResult* result = [CDVPluginResult
-                               resultWithStatus:CDVCommandStatus_OK
-                               messageAsBool:msg];
-
-   [self.commandDelegate sendPluginResult:result callbackId:callbackId];
+    CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:msg];
+   [self.commandDelegate sendPluginResult:result callbackId: command.callbackId];
 }
 @end
