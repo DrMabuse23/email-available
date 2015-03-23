@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.mway.plugin.MWAYDevice"
+        version="0.0.1">
+
+  <name>mWayDevice</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/mwaydevice.js" target="js/mwaydevice.js"/>
+
+  <js-module src="www/mwaydevice.js" name="mwayDevice">
+    <clobbers target="mwayDevice" />
+  </js-module>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="MWAYDevice">
+        <param name="android-package" value="com.mway.plugin.MWAYDevice"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/MWAYDevice.java" target-dir="src/com/example/plugin/"/>
+  </platform>
+
+  <platform name="ios">
+
+    <config-file target="config.xml" parent="/widget">
+      <feature name="MWAYDevice">
+        <param name="ios-package" value="MWAYDevice" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/MWAYDevice.h" target-dir="HelloPlugin"/>
+    <source-file src="src/ios/MWAYDevice.m" target-dir="HelloPlugin"/>
+  </platform>
+</plugin>
